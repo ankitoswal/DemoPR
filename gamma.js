@@ -19,7 +19,6 @@ import gammaConfig from './config';
 import * as db from '../component/db';
 import constants from 'constants';
 //test comment
-debugger;
 //import log from '../utils/logger';
 //const log = require('./../license/v1/utils/logging');
 import * as log from './../logs/logger';
@@ -63,7 +62,18 @@ if (!fs.existsSync(UPLOADS_DIR)) {
         fs.chmodSync(UPLOADS_DIR, 0o770);
     }
 }
-
+function Method1(a: string, b: number) {
+  switch (a) {
+    case 0:
+      switch (b) {  // nested switch voilation
+        // ...
+      }
+    case 1:
+      // ...
+    default:
+      // ...
+  }
+}
 function init() {
     // Avoids DEPTH_ZERO_SELF_SIGNED_CERT error
     process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
