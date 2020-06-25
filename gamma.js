@@ -19,6 +19,7 @@ import gammaConfig from './config';
 import * as db from '../component/db';
 import constants from 'constants';
 //test comment
+debugger;
 //import log from '../utils/logger';
 //const log = require('./../license/v1/utils/logging');
 import * as log from './../logs/logger';
